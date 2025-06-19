@@ -5,12 +5,10 @@ import CartButton from "@/features/cartButton";
 import { useProductStore } from "@/entity/product/store";
 
 const CartPage = () => {
-  const {
-    cartList,
-  } = useProductStore();
+  const { cartList } = useProductStore();
 
   if (!cartList.length) {
-    return <div>Список товаров пуст</div>;
+    return <div className="textColor textCenter mt20">Список товаров пуст</div>;
   }
 
   return (

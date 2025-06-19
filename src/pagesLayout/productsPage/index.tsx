@@ -18,16 +18,16 @@ const ProductsPage = () => {
         loadProducts(data);
       }
     });
-  }, []);
+  }, [loadProducts]);
 
   if (!!isError) {
-    return <div>{isError}</div>;
+    return <div className="textColor textCenter mt20">{isError}</div>;
   }
   if (isLoadProducts) {
-    return <div>Loading...</div>;
+    return <div className="textColor textCenter mt20">Loading...</div>;
   }
   if (!productList.length) {
-    return <div>Список товаров пуст</div>;
+    return <div className="textColor textCenter mt20">Список товаров пуст</div>;
   }
 
   return (

@@ -4,7 +4,7 @@ async function fetchOwerlay<T>(uri: string, method: Method) {
   try {
     const data = await axios<T>(uri, { method });
     return data.data;
-  } catch (error: any) {
+  } catch (error: unknown) {
     if (axios.isAxiosError(error)) {
       const status = error.response?.status;
       const statusText = error.response?.statusText;

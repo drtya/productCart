@@ -6,6 +6,7 @@
   max-width: 1500px;
   margin: 0 auto;
   &Logo {
+    color: var(--dark-color);
     font-size: 30px;
     letter-spacing: 7px;
   }
@@ -17,13 +18,15 @@
       font-size: 18px;
       font-weight: 500;
       transition: 0.5s;
-
+      & > a {
+        color: var(--dark-color);
+      }
       &::before {
         position: absolute;
         content: "";
         bottom: -4px;
         left: 0;
-        background-color: black;
+        background-color: var(--dark-color);
         height: 2px;
         width: 0%;
         transition: 0.5s;
