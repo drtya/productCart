@@ -1,0 +1,29 @@
+.productPage {
+  display: grid;
+  grid-template-columns: 340px 340px 340px 340px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (max-width: 1384) {
+  .productPage {
+    grid-template-columns: 340px 340px 340px;
+  }
+}
+@media (max-width: 1040) {
+  .productPage {
+    grid-template-columns: 340px 340px;
+  }
+}
+@media (max-width: 720) {
+  .productPage {
+    grid-template-columns: 340px;
+  }
+}
+@media (max-width: 420) {
+  .productPage {
+    display: block;
+    width: 100%;
+  }
+}

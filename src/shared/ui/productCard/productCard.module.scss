@@ -1,0 +1,66 @@
+.productCard {
+  position: relative;
+  padding: 10px;
+  &Image {
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  &Title {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark-color);
+  }
+  &Descr {
+    margin-bottom: 30px;
+    color: var(--gray-color);
+  }
+  &Price {
+    color: var(--dark-color);
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &PriceAndRate {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+  &Rate {
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+  }
+  &Stars {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: var(--lightgray-color);
+    position: relative;
+    &::before {
+      content: "★★★★★";
+      letter-spacing: 1px;
+    }
+
+    &::after {
+      content: "★★★★★";
+      letter-spacing: 1px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: gold;
+      width: var(--rating, 0%);
+      overflow: hidden;
+    }
+  }
+  &CartArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+  }
+}
