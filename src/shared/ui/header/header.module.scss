@@ -1,0 +1,40 @@
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1500px;
+  margin: 0 auto;
+  &Logo {
+    font-size: 30px;
+    letter-spacing: 7px;
+  }
+  &List {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    &El {
+      font-size: 18px;
+      font-weight: 500;
+      transition: 0.5s;
+
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: -4px;
+        left: 0;
+        background-color: black;
+        height: 2px;
+        width: 0%;
+        transition: 0.5s;
+      }
+      &:hover {
+        position: relative;
+        transform: scale(1.1);
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

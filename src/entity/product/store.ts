@@ -7,6 +7,7 @@ interface IProductStore {
   cartList: IProduct[];
   loadProducts: (products: IProduct[]) => void;
   toggleProductFromCart: (product: IProduct) => void;
+  hasInCart: (product: IProduct) => boolean;
 }
 
 const useProductStore = create<IProductStore>((set, get) => ({
@@ -20,7 +21,8 @@ const useProductStore = create<IProductStore>((set, get) => ({
   },
   toggleProductFromCart: (product) => {
     const { cartList } = get();
-    const hasProductInList = cartList.find((el) => el.productId === 12) ?? null;
+    const hasProductInList =
+      cartList.find((el) => el.productId === product.productId) ?? null;
 
     if (!hasProductInList) {
       set({ cartList: [...cartList, product] });
@@ -29,6 +31,13 @@ const useProductStore = create<IProductStore>((set, get) => ({
         cartList: cartList.filter((el) => el.productId !== product.productId),
       });
     }
+  },
+  hasInCart: (product) => {
+    const { cartList } = get();
+    const hasProductInList = !!cartList.find(
+      (el) => el.productId === product.productId
+    );
+    return hasProductInList;
   },
 }));
 

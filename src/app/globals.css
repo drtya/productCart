@@ -3,10 +3,18 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+ol,
+ul {
+  list-style-type: none;
+}
+a {
+  color: #000000;
+  text-decoration: none;
+}
 :root {
   --light-color: #ffffff;
   --dark-color: #000000;
   --gray-color: #4d4d4d;
   --lightgray-color: #eee;
+  --primary-color: #5334ff;
 }

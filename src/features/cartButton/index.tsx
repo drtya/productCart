@@ -1,17 +1,25 @@
 "use client";
 import React from "react";
 import styles from "./cartButton.module.scss";
+import { IProduct } from "@/shared/ui/productCard/productCard.interface";
+import { useProductStore } from "@/entity/product/store";
 type Props = {
-  productId: number;
+  product: IProduct;
 };
 
-const CartButton = ({ productId }: Props) => {
+const CartButton = ({ product }: Props) => {
+  const { toggleProductFromCart, hasInCart } = useProductStore();
   const productToCartHandler = () => {
-    console.log("click to", productId);
+    toggleProductFromCart(product);
   };
 
   return (
-    <button className={styles.cartButton} onClick={productToCartHandler}>
+    <button
+      className={`${styles.cartButton} ${
+        hasInCart(product) ? styles.active : ""
+      }`}
+      onClick={productToCartHandler}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"

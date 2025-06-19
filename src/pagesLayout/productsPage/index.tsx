@@ -29,7 +29,7 @@ const ProductsPage = () => {
     <div className={styles.productPage}>
       {productList.map((el) => (
         <ProductCard
-          cartBtn={<CartButton productId={el.productId} />}
+          cartBtn={<CartButton product={el} />}
           key={`product${el.productId}`}
           product={el}
         />
