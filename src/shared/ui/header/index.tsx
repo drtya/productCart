@@ -7,7 +7,7 @@ const Header = () => {
       <div className={styles.headerLogo}>LOGO</div>
       <ol className={styles.headerList}>
         <li className={styles.headerListEl}>
-          <Link href={"/"}>Products</Link>
+          <Link href={"/products"}>Products</Link>
         </li>
         <li className={styles.headerListEl}>
           <Link href={"/cart"}>Cart</Link>
