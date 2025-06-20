@@ -1,4 +1,4 @@
-.productPage {
+.listOverlay {
   display: grid;
   grid-template-columns: 340px 340px 340px 340px;
   align-items: center;
@@ -7,22 +7,22 @@
 }
 
 @media (max-width: 1384px) {
-  .productPage {
+  .listOverlay {
     grid-template-columns: 340px 340px 340px;
   }
 }
 @media (max-width: 1040px) {
-  .productPage {
+  .listOverlay {
     grid-template-columns: 340px 340px;
   }
 }
 @media (max-width: 720px) {
-  .productPage {
+  .listOverlay {
     grid-template-columns: 340px;
   }
 }
 @media (max-width: 420px) {
-  .productPage {
+  .listOverlay {
     display: block;
     width: 100%;
   }

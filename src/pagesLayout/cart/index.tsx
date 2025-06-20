@@ -1,8 +1,8 @@
 "use client";
-import styles from "./productsPage.module.scss";
 import { useProductStore } from "@/entity/product/store";
 import ProductCard from "../productsPage/ui/productCard";
 import DeleteProdFromCartBtn from "@/features/deleteProdFromCartBtn";
+import CardListOverlay from "@/shared/ui/cardListOverlay";
 
 const CartPage = () => {
   const { cartList } = useProductStore();
@@ -12,7 +12,7 @@ const CartPage = () => {
   }
 
   return (
-    <div className={styles.productPage}>
+    <CardListOverlay>
       {cartList.map((el) => (
         <ProductCard
           cartBtn={<DeleteProdFromCartBtn product={el} />}
@@ -20,7 +20,7 @@ const CartPage = () => {
           product={el}
         />
       ))}
-    </div>
+    </CardListOverlay>
   );
 };
 
