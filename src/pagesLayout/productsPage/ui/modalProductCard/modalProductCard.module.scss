@@ -1,0 +1,55 @@
+.productCard {
+  position: relative;
+  padding: 10px;
+  overflow: hidden;
+  &Carousel {
+    max-height: 420px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  &Title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--dark-color);
+  }
+  &Descr {
+    margin-top: 30px;
+    font-size: 20px;
+    color: var(--gray-color);
+  }
+  &Price {
+    color: var(--dark-color);
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &PriceAndAmount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+
+  &HasACart {
+    text-align: center;
+    height: 30px;
+    width: 100%;
+    background: var(--light-color);
+    color: var(--dark-color);
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 50px;
+    left: -100px;
+  }
+  &CartArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+  }
+}

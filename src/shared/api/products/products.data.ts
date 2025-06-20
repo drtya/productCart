@@ -1,4 +1,4 @@
-import { IProduct } from "@/shared/ui/productCard/productCard.interface";
+import { IProduct } from "@/shared/model/product";
 
 const products: IProduct[] = [
   {
@@ -12,6 +12,7 @@ const products: IProduct[] = [
       "/images/products/headphones2.jpg",
     ],
     price: 4990,
+    amount: 22,
   },
   {
     productId: 2,
@@ -20,6 +21,7 @@ const products: IProduct[] = [
     rate: 4.5,
     images: ["/images/products/watch1.jpeg", "/images/products/watch2.png"],
     price: 8990,
+    amount: 200,
   },
   {
     productId: 3,
@@ -29,6 +31,7 @@ const products: IProduct[] = [
     rate: 4.3,
     images: ["/images/products/scooter1.jpeg"],
     price: 27900,
+    amount: 10,
   },
   {
     productId: 4,
@@ -41,6 +44,7 @@ const products: IProduct[] = [
       "/images/products/keyboard2.webp",
     ],
     price: 5990,
+    amount: 0,
   },
   {
     productId: 5,
@@ -50,6 +54,7 @@ const products: IProduct[] = [
     rate: 4.6,
     images: ["/images/products/laptop1.png", "/images/products/laptop2.png"],
     price: 89900,
+    amount: 21,
   },
   {
     productId: 6,
@@ -62,6 +67,7 @@ const products: IProduct[] = [
       "/images/products/headphones2.jpg",
     ],
     price: 4990,
+    amount: 22,
   },
   {
     productId: 7,
@@ -70,6 +76,7 @@ const products: IProduct[] = [
     rate: 4.5,
     images: ["/images/products/watch1.jpeg", "/images/products/watch2.png"],
     price: 8990,
+    amount: 22,
   },
   {
     productId: 8,
@@ -79,6 +86,7 @@ const products: IProduct[] = [
     rate: 4.3,
     images: ["/images/products/scooter1.jpeg"],
     price: 27900,
+    amount: 22,
   },
   {
     productId: 9,
@@ -91,6 +99,7 @@ const products: IProduct[] = [
       "/images/products/keyboard2.webp",
     ],
     price: 5990,
+    amount: 22,
   },
   {
     productId: 10,
@@ -100,6 +109,7 @@ const products: IProduct[] = [
     rate: 4.6,
     images: ["/images/products/laptop1.png", "/images/products/laptop2.png"],
     price: 89900,
+    amount: 22,
   },
 ];
 

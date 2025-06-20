@@ -1,10 +1,13 @@
 "use client";
-import ProductCard from "@/shared/ui/productCard";
+import ProductCard from "@/pagesLayout/productsPage/ui/productCard";
 import styles from "./productsPage.module.scss";
-import CartButton from "@/features/cartButton";
+import CartButtonOpenModal from "@/features/cartButtonOpenModal";
 import { useProductStore } from "@/entity/product/store";
 import { useEffect, useState } from "react";
 import { getProducts } from "@/entity/product/api";
+import PopupOverlay from "@/shared/ui/popupOverlay";
+import ModalProductCard from "./ui/modalProductCard";
+import AddProductToCartForm from "@/features/addProductToCartForm";
 
 const ProductsPage = () => {
   const [isError, setIsError] = useState<string>("");
@@ -34,7 +37,27 @@ const ProductsPage = () => {
     <div className={styles.productPage}>
       {productList.map((el) => (
         <ProductCard
-          cartBtn={<CartButton product={el} />}
+          cartBtn={
+            <CartButtonOpenModal
+              modalWindow={(cb) => (
+                <PopupOverlay
+                  headerTitle={el.productTitle}
+                  footerButtons={
+                    <AddProductToCartForm
+                    closeCallback={cb}
+                      product={el}
+                      min={0}
+                      max={el.amount}
+                    />
+                  }
+                  closeCallback={cb}
+                >
+                  <ModalProductCard product={el} />
+                </PopupOverlay>
+              )}
+              product={el}
+            />
+          }
           key={`product${el.productId}`}
           product={el}
         />

@@ -1,0 +1,29 @@
+.rating {
+  color: var(--dark-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+
+  &Stars {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: var(--lightgray-color);
+    position: relative;
+    &::before {
+      content: "★★★★★";
+      letter-spacing: 1px;
+    }
+
+    &::after {
+      content: "★★★★★";
+      letter-spacing: 1px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: gold;
+      width: var(--rating, 0%);
+      overflow: hidden;
+    }
+  }
+}

@@ -1,16 +1,16 @@
 "use client";
-import React from "react";
-import styles from "./cartButton.module.scss";
-import { IProduct } from "@/shared/ui/productCard/productCard.interface";
+import styles from "./deleteProdFromCartBtn.module.scss";
 import { useProductStore } from "@/entity/product/store";
+import { IProduct } from "@/shared/model/product";
+
 type Props = {
   product: IProduct;
 };
 
-const CartButton = ({ product }: Props) => {
-  const { toggleProductFromCart, hasInCart } = useProductStore();
-  const productToCartHandler = () => {
-    toggleProductFromCart(product);
+const DeleteProdFromCartBtn = ({ product }: Props) => {
+  const { deleteProductFromCart, hasInCart } = useProductStore();
+  const deleteProductHandler = () => {
+    deleteProductFromCart(product);
   };
 
   return (
@@ -18,7 +18,7 @@ const CartButton = ({ product }: Props) => {
       className={`${styles.cartButton} ${
         hasInCart(product) ? styles.active : ""
       }`}
-      onClick={productToCartHandler}
+      onClick={deleteProductHandler}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -39,4 +39,4 @@ const CartButton = ({ product }: Props) => {
   );
 };
 
-export default CartButton;
+export default DeleteProdFromCartBtn;
