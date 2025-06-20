@@ -1,4 +1,4 @@
-.productPage {
+.listOverlay {
   display: grid;
   grid-template-columns: 340px 340px 340px 340px;
   align-items: center;
@@ -6,23 +6,23 @@
   gap: 10px;
 }
 
-@media (max-width: 1384) {
-  .productPage {
+@media (max-width: 1384px) {
+  .listOverlay {
     grid-template-columns: 340px 340px 340px;
   }
 }
-@media (max-width: 1040) {
-  .productPage {
+@media (max-width: 1040px) {
+  .listOverlay {
     grid-template-columns: 340px 340px;
   }
 }
-@media (max-width: 720) {
-  .productPage {
+@media (max-width: 720px) {
+  .listOverlay {
     grid-template-columns: 340px;
   }
 }
-@media (max-width: 420) {
-  .productPage {
+@media (max-width: 420px) {
+  .listOverlay {
     display: block;
     width: 100%;
   }
