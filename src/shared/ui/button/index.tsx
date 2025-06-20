@@ -1,13 +1,9 @@
 import React from "react";
 import styles from "./button.module.scss";
 
-interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
-
-function Button({ color, className, children, ...props }: Props) {
+function Button({ className, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
-    <button className={`${styles.button} ${className}`} {...props}>
-      {children}
-    </button>
+    <button className={`${styles.button} ${className}`} {...props}/>
   );
 }
 

@@ -1,8 +1,7 @@
 import { InputHTMLAttributes } from "react";
 import styles from "./input.module.scss";
 
-interface Props extends InputHTMLAttributes<HTMLInputElement> {}
-function Input({ className, ...props }: Props) {
+function Input({ className, ...props }: InputHTMLAttributes<HTMLInputElement>) {
   return (
     <input
       type="number"

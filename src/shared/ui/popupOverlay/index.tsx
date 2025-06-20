@@ -1,5 +1,6 @@
 import { HTMLAttributes, useEffect } from "react";
 import styles from "./popupOverlay.module.scss";
+import Image from "next/image";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   headerTitle: string;
@@ -37,7 +38,7 @@ function PopupOverlay({
             className={styles.popupWindowHeaderClose}
             onClick={() => closeCallback(false)}
           >
-            <img src="/images/svgs/close.svg" alt="close" />
+            <Image src="/images/svgs/close.svg" alt="close" />
           </button>
         </div>
         <div className={styles.popupWindowBody}>{children}</div>

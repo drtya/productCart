@@ -1,18 +1,16 @@
 "use client";
-import { CSSProperties, HTMLAttributes, ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 import styles from "./modalProductCard.module.scss";
 import { IProduct } from "@/shared/model/product";
 import CustomCarousel from "@/shared/ui/customCarousel";
-import RatingStar from "@/shared/ui/ratingStar";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   product: IProduct;
   cartBtn?: ReactNode;
-  hasCart?: boolean;
 }
 
-function ModalProductCard({ product, cartBtn, hasCart, ...props }: Props) {
-  const { productTitle, description, rate, images, price } = product;
+function ModalProductCard({ product, cartBtn, ...props }: Props) {
+  const { productTitle, description, images, price } = product;
 
   return (
     <div className={styles.productCard} {...props}>

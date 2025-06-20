@@ -1,6 +1,5 @@
 "use client";
 import styles from "./productsPage.module.scss";
-import CartButtonOpenModal from "@/features/cartButtonOpenModal";
 import { useProductStore } from "@/entity/product/store";
 import ProductCard from "../productsPage/ui/productCard";
 import DeleteProdFromCartBtn from "@/features/deleteProdFromCartBtn";

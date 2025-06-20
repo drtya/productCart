@@ -8,10 +8,9 @@ import RatingStar from "@/shared/ui/ratingStar";
 interface Props extends HTMLAttributes<HTMLDivElement> {
   product: IProduct;
   cartBtn?: ReactNode;
-  hasCart?: boolean;
 }
 
-function ProductCard({ product, cartBtn, hasCart, ...props }: Props) {
+function ProductCard({ product, cartBtn, ...props }: Props) {
   const { productTitle, description, rate, images, price, amount } = product;
 
   return (

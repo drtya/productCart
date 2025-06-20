@@ -22,10 +22,9 @@ function CustomCarousel({ images, productTitle, ...props }: Props) {
       {...props}
     >
       {images.map((item, index) => (
-        <div>
+        <div key={`carousel_${index}`}>
           <Image
             className={styles.CarouselImage}
-            key={`carousel_${index}`}
             src={item}
             alt={productTitle}
             width={400}
