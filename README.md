@@ -5,7 +5,12 @@ Dark/Light mode
 
 ![Главная страница](./public/desctopLight.png)
 
+Первая версия, без поля amount: 
 https://productys.netlify.app/products
+
+
+Вторая более полная версия: 
+https://deploy-preview-1--productys.netlify.app/products
 
 ProductCart - это веб-приложение, реализующее минимальный функционал интернет-магазина. Пользователь может просматривать товары, добавлять их в корзину.
 
