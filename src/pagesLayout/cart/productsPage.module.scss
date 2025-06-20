@@ -6,22 +6,22 @@
   gap: 10px;
 }
 
-@media (max-width: 1384) {
+@media (max-width: 1384px) {
   .productPage {
     grid-template-columns: 340px 340px 340px;
   }
 }
-@media (max-width: 1040) {
+@media (max-width: 1040px) {
   .productPage {
     grid-template-columns: 340px 340px;
   }
 }
-@media (max-width: 720) {
+@media (max-width: 720px) {
   .productPage {
     grid-template-columns: 340px;
   }
 }
-@media (max-width: 420) {
+@media (max-width: 420px) {
   .productPage {
     display: block;
     width: 100%;
