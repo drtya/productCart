@@ -5,5 +5,6 @@ interface IProduct {
   rate: number;
   images: string[];
   price: number;
+  amount: number;
 }
 export type { IProduct };

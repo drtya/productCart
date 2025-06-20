@@ -1,0 +1,10 @@
+.cartButton {
+  background: none;
+  cursor: pointer;
+  border: none;
+  color: var(--gray-color);
+  transition: 0.3s;
+  &.active {
+    color: var(--primary-color);
+  }
+}
